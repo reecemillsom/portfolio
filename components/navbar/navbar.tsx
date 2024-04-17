@@ -23,8 +23,9 @@ export const Navbar: FC = () => {
         {/* TODO I may change this to a logo or something in the future, make this clickable to navigate back to main page*/}
         <NavName>Reece Millsom</NavName>
         <NavOptionsContainer>
-          {MENU_OPTIONS.map((option) => (
+          {MENU_OPTIONS.map((option, index) => (
             <NavOption
+              tabIndex={index + 1}
               onClick={() => handleNavClick(option.href)}
               className={selectedHref === option.href ? "active" : ""}
               key={option.href}
