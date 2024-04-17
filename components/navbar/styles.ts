@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 import Link from "next/link";
 
 export const NavBar = styled.nav`
@@ -21,28 +22,22 @@ export const NavOptionsContainer = styled.ul`
   align-items: center;
 `;
 
+const dynamicNavOptionStyle = ({ className }: { className: string }) => css`
+  border-bottom: ${className === "active"
+    ? `2px solid var(--light-blue)`
+    : "none"};
+`;
+
 // TODO the style in and out animation isn't working as expected.
 export const NavOption = styled(Link)`
   color: var(--white);
   text-decoration: none;
+  ${dynamicNavOptionStyle};
 
-  display: inline-block;
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    height: 2px;
-    background-color: var(--white);
-    transition: width 0.25s ease-out;
-  }
-
-  &:hover::before {
-    width: 100%;
-    left: 0;
-    right: auto;
+  &:hover {
+    &:not(.active) {
+      border-bottom: 2px solid var(--white);
+    }
   }
 
   &:not(:last-child) {
