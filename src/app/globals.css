@@ -3,6 +3,7 @@
 :root {
   background: white;
   font-family: "Open sans", sans-serif;
+  scroll-behavior: smooth;
 
   /*Colour variables, TODO can probably achieve this via chakra theme*/
   --navy: #334257;
