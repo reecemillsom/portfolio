@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+// TODO when refreshing, should scroll me back into same place on the page.
 export const useScrollToSection = () => {
   const [selectedHref, setSelectedHref] = useState<string | null>(null);
 
