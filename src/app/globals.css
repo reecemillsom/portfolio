@@ -1,23 +1,3 @@
-/*@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");*/
-
-/*:root {*/
-/*  background: white;*/
-/*  font-family: "Open sans", sans-serif;*/
-/*  scroll-behavior: smooth;*/
-
-/*  !*Colour variables, TODO can probably achieve this via chakra theme*!*/
-/*  --navy: #334257;*/
-/*  --medium-blue: #476072;*/
-/*  --light-blue: #548ca8;*/
-/*  --white: #eeeeee;*/
-
-/*  !*Spacing variables*!*/
-/*  !*--space-sm: 12px;*!*/
-/*  !*--space-md: 24px;*!*/
-/*  !*--space-lg: 36px;*!*/
-/*  !*--space-xl: 48px;*!*/
-/*}*/
-
 html,
 body {
   max-width: 100vw;
