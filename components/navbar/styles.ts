@@ -5,8 +5,11 @@ import Link from "next/link";
 export const NavBar = styled.nav`
   width: 100%;
   height: 60px;
+  position: sticky;
+  top: 0;
 
   background-color: var(--navy);
+  box-shadow: 0 2px 8px -2px var(--navy);
 `;
 
 export const NavContainer = styled.div`
