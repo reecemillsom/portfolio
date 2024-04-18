@@ -8,13 +8,13 @@ export const NavBar = styled.nav`
   position: sticky;
   top: 0;
 
-  background-color: var(--navy);
-  box-shadow: 0 2px 8px -2px var(--navy);
+  background-color: var(--chakra-colors-navy);
+  box-shadow: 0 2px 8px -2px var(--chakra-colors-navy);
 `;
 
 export const NavContainer = styled.div`
   height: 100%;
-  margin: 0 var(--space-xl);
+  margin: 0 var(--chakra-space-xl);
 
   display: flex;
   justify-content: space-between;
@@ -27,30 +27,29 @@ export const NavOptionsContainer = styled.ul`
 
 const dynamicNavOptionStyle = ({ className }: { className: string }) => css`
   border-bottom: ${className === "active"
-    ? `2px solid var(--light-blue)`
+    ? `2px solid var(--chakra-colors-lightBlue)`
     : "none"};
 `;
 
-// TODO the style in and out animation isn't working as expected.
 export const NavOption = styled(Link)`
-  color: var(--white);
+  color: var(--chakra-colors-white);
   text-decoration: none;
   ${dynamicNavOptionStyle};
 
   &:hover {
     &:not(.active) {
-      border-bottom: 2px solid var(--white);
+      border-bottom: 2px solid var(--chakra-colors-white);
     }
   }
 
   &:not(:last-child) {
-    margin-right: var(--space-md);
+    margin-right: var(--chakra-space-md);
   }
 `;
 
 export const NavName = styled.ul`
   display: flex;
   align-items: center;
-  color: var(--white);
+  color: var(--chakra-colors-white);
   padding-left: 0;
 `;
