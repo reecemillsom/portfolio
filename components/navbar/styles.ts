@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import { css } from "@emotion/react";
 import { Link } from "@chakra-ui/next-js";
+import { MenuItem } from "@chakra-ui/react";
 
 export const NavBar = styled.nav`
   width: 100%;
@@ -14,7 +14,7 @@ export const NavBar = styled.nav`
 
 export const NavContainer = styled.div`
   height: 100%;
-  margin: 0 var(--chakra-space-xl);
+  margin: 0 var(--chakra-space-md);
 
   display: flex;
   justify-content: space-between;
@@ -25,25 +25,21 @@ export const NavOptionsContainer = styled.ul`
   align-items: center;
 `;
 
-const dynamicNavOptionStyle = ({ className }: { className: string }) => css`
-  border-bottom: ${className === "active"
-    ? `2px solid var(--chakra-colors-lightBlue)`
-    : "none"};
+export const NavItem = styled(MenuItem)`
+  &.active {
+    content: "";
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-right: 4px solid var(--chakra-colors-navy);
+    border-radius: 4px 0 0 4px;
+  }
 `;
 
 export const NavOption = styled(Link)`
-  color: var(--chakra-colors-white);
-  ${dynamicNavOptionStyle};
-
   &:hover {
     text-decoration: none;
-    &:not(.active) {
-      border-bottom: 2px solid var(--chakra-colors-white);
-    }
-  }
-
-  &:not(:last-child) {
-    margin-right: var(--chakra-space-md);
   }
 `;
 
