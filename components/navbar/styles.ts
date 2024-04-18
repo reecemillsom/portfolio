@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
-import Link from "next/link";
+import { Link } from "@chakra-ui/next-js";
 
 export const NavBar = styled.nav`
   width: 100%;
@@ -33,10 +33,10 @@ const dynamicNavOptionStyle = ({ className }: { className: string }) => css`
 
 export const NavOption = styled(Link)`
   color: var(--chakra-colors-white);
-  text-decoration: none;
   ${dynamicNavOptionStyle};
 
   &:hover {
+    text-decoration: none;
     &:not(.active) {
       border-bottom: 2px solid var(--chakra-colors-white);
     }
