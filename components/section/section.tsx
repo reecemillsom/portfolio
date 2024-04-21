@@ -1,4 +1,5 @@
 import { FC } from "react";
+import * as S from "./styles";
 
 interface Props {
   id: string;
@@ -6,5 +7,9 @@ interface Props {
 
 // TODO add styles for this.
 export const Section: FC<Props> = ({ id }) => {
-  return <section id={id} style={{ height: "300px" }}></section>;
+  return (
+    <S.Section id={id}>
+      <div>content</div>
+    </S.Section>
+  );
 };
