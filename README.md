@@ -1,4 +1,15 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+**This project is so far only the preparation of creating a portfolio site.**
+
+Technologies that are going to be used:
+
+1. Chakra UI
+2. React
+3. React hooks
+4. Emotion
+5. Framer-motion
+6. NextJS
+
+I have also configured formatting & code quality tools into the project from the get go.
 
 ## Getting Started
 
